@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3. feladat</title>
+    <script>
+        const Dátum = new Date();
+        console.log(Dátum);
+        const óra = Dátum.getHours();
+        function időszak(){
+        if (óra > 0 && óra < 10){
+            return "reggelt";
+        } else if (óra >=10 && óra < 12){
+            return "délelőttöt";
+        } else if (óra >= 12 && óra < 18){
+            return "délutánt";
+        } else if (óra >=18 && óra < 22){
+            return "Estét";
+        } else {
+            return "éjszakát";
+        }
+        }
+        function Értesítés() {
+          alert("Üdvözlöm, szép " + időszak() + "!");
+        }
+        </script>
 </head>
 <body>
-    
+    <button onclick="Értesítés()">Köszöntés</button>
 </body>
 </html>
