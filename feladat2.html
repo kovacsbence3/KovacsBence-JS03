@@ -6,12 +6,12 @@
     <script>
         function Számítás(){
             const eredmeny = document.getElementById("eredmény")
-            AOldal = parseInt(document.getElementById("A").value)
-            BOldal = parseInt(document.getElementById("B").value)
-            COldal = parseInt(document.getElementById("C").value)
-            Kerület = AOldal+BOldal+COldal;
-            s = Kerület/2;
-            Terület = Math.sqrt(s*(s-AOldal)*(s-BOldal)*(s-COldal));
+            let AOldal = parseInt(document.getElementById("A").value)
+            let BOldal = parseInt(document.getElementById("B").value)
+            let COldal = parseInt(document.getElementById("C").value)
+            let Kerület = AOldal+BOldal+COldal;
+            let s = Kerület/2;
+            let Terület = Math.sqrt(s*(s-AOldal)*(s-BOldal)*(s-COldal));
             eredmeny.innerHTML = "A hátomszög kerülete: " +  Kerület + " A háromszög területe: " + Terület;
 
         }
