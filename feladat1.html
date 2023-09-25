@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Első feladat</title>
+
+    <script>
+        function randomszam(){
+            randomSzam = Math.trunc(Math.random()*100+1);
+            return randomSzam;
+        }
+
+        var random = randomszam();
+        function ujRandom(){
+            random = randomszam();
+        }
+
+        function kiÍrás(){
+        const tipp = document.getElementById("Tipp");
+        if (tipp.value == random){
+            eredmeny = "Talált";
+        } else if(tipp.value > random){
+            eredmeny = "A random szám kisebb";
+        } else{
+            eredmeny = "A random szám nagyobb"
+        }
+        eredmény.innerHTML = eredmeny;
+        }
+
+
+    </script>
+</head>
+<body>
+    <input id="Tipp" placeholder="Kérlek add meg a tippet">
+    <button onclick="kiÍrás(this)">Tippelek</button>
+    <button onclick="ujRandom()">Új számot generálok</button>
+    <p id="eredmény">Kattints a "Tippelek" gombra a tipped beküldéséhez vagy az "Új számot generálok" gombra 
+        egy új random szám generálásához.</p> 
+</body>
+</html>
