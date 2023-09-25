@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function Számítás(){
+            const eredmeny = document.getElementById("eredmény")
+            AOldal = parseInt(document.getElementById("A").value)
+            BOldal = parseInt(document.getElementById("B").value)
+            COldal = parseInt(document.getElementById("C").value)
+            Kerület = AOldal+BOldal+COldal;
+            s = Kerület/2;
+            Terület = Math.sqrt(s*(s-AOldal)*(s-BOldal)*(s-COldal));
+            eredmeny.innerHTML = "A hátomszög kerülete: " +  Kerület + " A háromszög területe: " + Terület;
+
+        }
+
+
+    </script>
     <title>2. feladat</title>
 </head>
 <body>
+    <input type="number" id = "A" placeholder="A oldal">
+    <input type="number" id = "B" placeholder="B oldal">
+    <input type="number" id = "C" placeholder="C oldal">
+    <button onclick = "Számítás(this)">Terület és kerület számolása</button>
+    <p id="eredmény">Az eredmény a gomb megnyomása után jelenik meg</p>
     
 </body>
 </html>
